@@ -1,30 +1,39 @@
 import { useEffect, useState } from "react";
+import axios from 'axios';
 
 function PokemonList(){
 
-    const [x, setX] = useState(0);
-    const [y, setY] = useState(0);
+    const [pokemonList, setPokemonList] = useState([]);
+    const [isLoadings, setIsLoading] = useState(true);
+
+
+
+    async function downloadPokemons(){
+        const response = await axios.get('https://pokeapi.co/api/v2/pokemon');
+        
+        const  pokemonResults = response.data.results;
+
+       const pokemonResultsPromise =  pokemonResults.map((pokemon) => axios.get(pokemon.url));
+
+    //    const pokemonData = await axios.all();
+
+       console.log(pokemonResultsPromise);
+        setIsLoading(false);
+    }
 
     useEffect(() => {
-        console.log("Effect called")
+            downloadPokemons();
     }, []);
 
    
 
     return (
-        <>
             <div>
-                X: {x} <button onClick={() => setX(x+1)}>Inc</button>
-                
-            </div>
-
-            <div>
-                Y: {y} <button onClick={() => setY(y+1)}>Inc</button>
-
+                <div>Pokemon List</div>
+                {{isLoadings} ? ' Loading....' : 'Data downloading'}
             </div>
         
         
-        </>
     )
 }
 
