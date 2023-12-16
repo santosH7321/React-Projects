@@ -5,7 +5,7 @@ function Fotter(){
         <div className="flex justify-center items-center bg-gray-900 text-white p-10">
             <div className="flex justify-between items-center gap-20 ">
                 <div className="text-5xl font-bold m-10 ">
-                    <h1>Nike</h1>
+                    <h1 className="animate-bounce select-none">Nike</h1>
                 </div>
                 <div className="m-5 ">
                     <nav>
