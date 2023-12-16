@@ -1,10 +1,11 @@
-
+// import React from "react";
+import brandImage from '../assets/brand_logo.png';
 function Navigation(){
     return(
         <div className="p-3  bg-gray-300">
             <nav className="flex justify-evenly items-center ">
                 <div>
-                    <img src="../assets/brand_logo.png" alt="logo" />
+                    <img src={brandImage} alt="logo" />
                 </div>
 
             
