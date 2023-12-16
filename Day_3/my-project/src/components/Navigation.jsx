@@ -1,22 +1,21 @@
-// import React from "react";
-// import Logo from '../assets/brand_logo.png';
+
 function Navigation(){
     return(
-        <div>
-            <nav>
+        <div className="p-3  bg-gray-300">
+            <nav className="flex justify-evenly items-center ">
                 <div>
                     <img src="../assets/brand_logo.png" alt="logo" />
                 </div>
 
             
-                    <ul>
+                    <ul className="flex justify-between gap-x-8 text-xl font-semibold ">
                         <li href="#">Menu</li>
                         <li href="#">Location</li>
                         <li href="#">About</li>
                         <li href="#">Contact</li>
                     </ul>
 
-                <button>Login</button>
+                <button className="p-2 px-6 bg-red-600 text-xl font-semibold rounded text-white">Login</button>
             </nav>
         </div>
     );
