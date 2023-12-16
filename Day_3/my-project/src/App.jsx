@@ -1,3 +1,4 @@
+import Fotter from "./components/Fotter"
 import HeroSection from "./components/HeroSection"
 import Navigation from "./components/Navigation"
 
@@ -7,6 +8,7 @@ function App() {
     <div>
       <Navigation />
       <HeroSection />
+      <Fotter />
     </div>
   )
 }

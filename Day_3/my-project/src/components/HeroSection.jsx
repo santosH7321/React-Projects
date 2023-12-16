@@ -14,8 +14,10 @@ function HeroSection(){
                     </button>
                     <p className='py-5 '>Also Avilabe on</p>
                     <div className='flex gap-5'>
-                            <img src={flipkart} alt="flipkart" />
-                             <img src={amazon} alt="amazon" />
+                            <a href="https://www.flipkart.com/"><img src={flipkart} alt="flipkart" /></a>
+
+                            <a href="https://www.amazon.in/home/home"><img src={amazon} alt="amazon" /></a>
+
                     </div>
                     
                 </section>
