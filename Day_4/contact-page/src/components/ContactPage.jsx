@@ -21,18 +21,18 @@ const ContactPage = () =>{
 
                     <button className="flex p-2 px-[140px] border-2 border-black text-black  font-bold text-xl rounded hover:bg-sky-700 hover:text-white"><img className='m-2' src={Massege} alt="" />VIA EMAIL FORM</button>
 
-                   <label className='flex justify-center items-center m-10'>
-                        <div className=''>
-                            <div >
-                            Name: <input type="text" className='px-4 py-2 m-2 border-2 border-sky-500 rounded'/>
+                   <div className='flex justify-around items-center m-10 max-md:flex-col-reverse max-md:w-[100%] '>
+                        <div>
+                            <div>
+                            Name: <input type="text" className='w-[100%] px-4 py-2 m-2 border-2 border-sky-500 rounded'/>
                             </div>
                             
                             <div>
-                            Email: <input className='px-4 py-2 m-2 border-2 border-sky-500 rounded' type="email" />
+                            Email: <input className='w-[100%] px-4 py-2 m-2 border-2 border-sky-500 rounded' type="email" />
                             </div>
                             
                             <div>
-                            TEXT: <textarea className='px-4 py-2 m-2 border-2 border-sky-500 rounded'  name="" id="" cols="30" rows="10"></textarea>
+                            TEXT: <textarea className='w-[100%] px-4 py-2 m-2 border-2 border-sky-500 rounded'  name="" id="" cols="30" rows="10"></textarea>
                             </div>
                             
                             <div className='flex justify-end my-4'>
@@ -44,7 +44,7 @@ const ContactPage = () =>{
                         <div>
                             <img className='w-[608px] h-[615px] ' src={CallCenter} alt="" />
                         </div>
-                   </label>
+                   </div>
                 </div>
                 <div>
 

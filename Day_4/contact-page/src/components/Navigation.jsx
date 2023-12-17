@@ -7,9 +7,9 @@ const Navigation = () => {
             <img src={logo} alt="" />
         </div>
         <ul className='flex justify-center items-center gap-20 mr-10 text-xl font-semibold'>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
+            <li className='cursor-pointer hover:text-gray-700'>Home</li>
+            <li className='cursor-pointer hover:text-gray-700'>About</li>
+            <li className='cursor-pointer hover:text-gray-700'>Contact</li>
         </ul>
     </nav>
   );
