@@ -14,6 +14,8 @@ const NumberSelector = () => {
             <p className="h-[72px] w-[72px] border-4 border-black text-5xl font-bold flex justify-center ">4</p>
             <p className="h-[72px] w-[72px] border-4 border-black text-5xl font-bold flex justify-center ">5</p>
             <p className="h-[72px] w-[72px] border-4 border-black text-5xl font-bold flex justify-center ">6</p>
+
+            
         </div>
     </div>
   );
