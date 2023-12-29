@@ -11,7 +11,8 @@ const Navigation = (props) => {
                 <li className="hover:text-red-800"><a href="/Service">{props.Service}</a></li>
                 <li className="hover:text-red-800"><a href="/Contact">{props.Contact}</a></li>
             </nav>
-            <div className="text-xl text-white px-8 py-2 bg-sky-700 rounded font-semibold">
+            <div className="text-xl text-white px-8 py-2 bg-sky-700 rounded font-semibold
+             hover:bg-green-800">
                 <button>{props.Login}</button>
             </div>
         </div>

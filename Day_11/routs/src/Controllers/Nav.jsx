@@ -1,4 +1,4 @@
-import Navigation from "./Navigation";
+import Navigation from "../Components/Navigation";
 import { useState } from "react";
 
 function Nav() {
