@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
 
@@ -10,6 +10,11 @@ const  getUsers = async() => {
     setusers(data)
   } 
 
+  useEffect(() => {
+    getUsers()
+  
+  }, [])
+  
   return (
     <div>
       <button className='text-2xl px-6 py-3 bg-green-700 text-white m-10 rounded font-bold' onClick={getUsers}>Get Data</button>
@@ -18,7 +23,7 @@ const  getUsers = async() => {
         <ul>
         {users.map((e) => {
           return <li>{e.username} --- <Link
-          href={""}>
+          href={`/${e.id}`}>
             Explore
           </Link></li>
         })}
