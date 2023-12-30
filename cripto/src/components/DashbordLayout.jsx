@@ -14,12 +14,13 @@ const DashbordLayout = ({ title, children }) => {
             base: "none",
             lg: "flex",
           }}
-        ><Sidenav/>
+        >
+            <Sidenav/>
         </Box>
         <SideDrawer isOpen={isOpen} onClose={onClose} />
       <Box flexGrow={1}>
         <TopNav title={title} onOpen={onOpen}/>
-        <Container maxW="70rem" bg="Green">{children}</Container>
+        <Container mt="6" maxW="70rem">{children}</Container>
       </Box>
     </Flex>
   );

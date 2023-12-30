@@ -21,8 +21,10 @@ const Sidenav = () => {
     },
   ];
   return (
-    <Stack justifyContent="space-between"  
-    W={{
+    <Stack 
+    bg="white"
+    justifyContent="space-between"  
+    minW={{
       base: "full",
       lg: "16rem",
     }} h="100vh"

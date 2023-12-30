@@ -1,9 +1,10 @@
-import DashbordLayout from "../../components/DashbordLayout"
+import DashbordLayout from "../../components/DashbordLayout";
+import portfolioSection from "./components/portfolioSection";
 
 
-const Dashboard = ({}) => {
+const Dashboard = () => {
   return <DashbordLayout title="Dashbord">
-    <div>Hello jee</div>
+    <portfolioSection />
   </DashbordLayout>
 }
 
