@@ -1,10 +1,16 @@
-import React from 'react'
+import Nav from "../Controllers/Nav"
+
+
 
 const Home = () => {
   return (
-    <div className='h-[100vh] w-[100vw] bg-teal-600'>
+    <>
+    <Nav/>
+    <div className='h-[100vh] w-[100vw] bg-teal-600 '>
       <h1>Home</h1>
     </div>
+    </>
+    
   )
 }
 
