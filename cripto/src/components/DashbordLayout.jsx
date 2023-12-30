@@ -8,10 +8,17 @@ const DashbordLayout = ({ title, children }) => {
     const { isOpen, onClose, onOpen} = useDisclosure();
   return (
     <Flex>
-      <Sidenav />
+      
+        <Box
+         display={{
+            base: "none",
+            lg: "flex",
+          }}
+        ><Sidenav/>
+        </Box>
         <SideDrawer isOpen={isOpen} onClose={onClose} />
       <Box flexGrow={1}>
-        <TopNav title={title} />
+        <TopNav title={title} onOpen={onOpen}/>
         <Container maxW="70rem" bg="Green">{children}</Container>
       </Box>
     </Flex>
