@@ -2,6 +2,9 @@ import { Box, HStack, Heading, Icon, Stack, Text } from "@chakra-ui/react";
 import { RxDashboard } from "react-icons/rx";
 import { TbArrowsExchange2 } from "react-icons/tb";
 import { BiSupport } from "react-icons/bi";
+import "@fontsource/ubuntu/400.css";
+import "@fontsource/ubuntu/500.css";
+import "@fontsource/ubuntu/700.css";
 
 const Sidenav = () => {
   const navLinks = [
@@ -18,7 +21,7 @@ const Sidenav = () => {
     },
   ];
   return (
-    <Stack justifyContent="space-between" boxShadow="lg" maxW="16rem" h="100vh">
+    <Stack justifyContent="space-between" boxShadow="lg" minW="16rem" h="100vh">
     <box>
         <Heading textAlign="center" fontSize="20px" pt="3.5rem" as="h1">
         @DOSOMECODING
@@ -32,7 +35,7 @@ const Sidenav = () => {
             }}
             color="#797E82" >
             <Icon as={nav.icon} />
-            <Text fontSize="14px" fontWeight="medium" color="#797E82">{nav.text}</Text>
+            <Text fontSize="14px" fontWeight="medium" >{nav.text}</Text>
           </HStack>
         ))}
       </Box>
@@ -51,7 +54,7 @@ const Sidenav = () => {
             
           >
             <Icon as={BiSupport } />
-            <Text fontSize="14px" fontWeight="medium" color="#797E82">Support</Text>
+            <Text fontSize="14px" fontWeight="medium" >Support</Text>
           </HStack>
       </Box>
     </Stack>
