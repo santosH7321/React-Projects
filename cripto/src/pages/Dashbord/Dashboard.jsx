@@ -1,20 +1,10 @@
-import Sidenav from "../../components/Sidenav"
-import TopNav from "../../components/TopNav"
-import { Box, Flex } from "@chakra-ui/react"
+import DashbordLayout from "../../components/DashbordLayout"
 
-const Dashboard = () => {
-  return (
-    <div>
-      <Flex>
-      <Sidenav />
 
-      <Box flexGrow={1}>
-        <TopNav />
-      </Box>
-      </Flex>
-      
-    </div>
-  )
+const Dashboard = ({}) => {
+  return <DashbordLayout title="Dashbord">
+    <div>Hello jee</div>
+  </DashbordLayout>
 }
 
 export default Dashboard

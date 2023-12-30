@@ -1,11 +1,13 @@
 import { Heading, Menu, MenuButton, MenuList, MenuItem, HStack, Box, Icon } from "@chakra-ui/react";
 import { HiUserCircle } from "react-icons/hi";
+import { FaBars } from "react-icons/fa6";
 
-const TopNav = () => {
+const TopNav = ({ title }) => {
   return (
-    <Box>
-         <HStack maxW="80rem"  h='16' justify="space-between" px="32" mx="auto">
-        <Heading fontWeight="medium" fontSize="28px">Dashbord</Heading>
+    <Box px="4">
+         <HStack maxW="70rem"  h='16' justify="space-between"  mx="auto">
+          <Icon as={FaBars }/>
+        <Heading fontWeight="medium" fontSize="28px">{title}</Heading>
 
         <Menu>
           <MenuButton>

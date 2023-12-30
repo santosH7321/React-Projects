@@ -21,7 +21,13 @@ const Sidenav = () => {
     },
   ];
   return (
-    <Stack justifyContent="space-between" boxShadow="lg" minW="16rem" h="100vh">
+    <Stack justifyContent="space-between" boxShadow="lg" minW="16rem" h="100vh"
+    
+    display={{
+      base: "none",
+      lg: "flex",
+    }}
+    >
     <box>
         <Heading textAlign="center" fontSize="20px" pt="3.5rem" as="h1">
         @DOSOMECODING
