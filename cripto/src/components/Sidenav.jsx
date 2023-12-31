@@ -24,10 +24,11 @@ const Sidenav = () => {
     <Stack 
     bg="white"
     justifyContent="space-between"  
-    minW={{
+    w={{
       base: "full",
       lg: "16rem",
-    }} h="100vh"
+    }}
+    h="100vh"
     boxShadow={{
       base: "none",
       lg: "lg",

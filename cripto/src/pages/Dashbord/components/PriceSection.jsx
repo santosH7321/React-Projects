@@ -15,6 +15,7 @@ import {
   import { CustomCard } from "../../../chakra/CustomCard";
   import { BsArrowUpRight } from "react-icons/bs";
   import { AiFillPlusCircle, AiOutlineMinusCircle } from "react-icons/ai";
+  import Images from '../../../assets/Graph.png'
   
   const PriceSection = () => {
     const timestamps = ["7:15 PM", "7:55 PM", "8:55 PM", "9:55 PM", "10:55 PM"];
@@ -73,7 +74,7 @@ import {
           </Flex>
           <TabPanels>
             <TabPanel>
-              <Image w="100%" src="/graph.svg" mt="3rem" />
+              <Image w="100%" src={Images} mt="3rem" />
               <HStack justify="space-between">
                 {timestamps.map((timestamp) => (
                   <Text key={timestamp} fontSize="sm" color="black.80">
