@@ -37,7 +37,7 @@ const Sidenav = () => {
     >
     <box>
         <Heading textAlign="center" fontSize="20px" pt="3.5rem" as="h1">
-        @DOSOMECODING
+        Santosh Crypto
       </Heading>
       <Box mt="6" mx="3">
         {navLinks.map((nav) => (
