@@ -1,17 +1,16 @@
-import Template from "../components/Template"
+
 import signupImg from "../assets/signup.png"
+import Template from '../components/Template'
+
 const Signup = ({setIsLoggedIn}) => {
   return (
     <Template
-    title="Joins the milions learning to code with StudyNotion for free"
-    desc1="Bulding skills for today, tommorrow, and beyond."
-    desc2="Education to future-proof your career."
-    image={signupImg}
-    formtype="signup"
-    setIsLoggedIn={setIsLoggedIn}
-
-    
-    
+      title="Join the millions learning to code with StudyNotion for free"
+      desc1="Build skills for today, tomorrow, and beyond."
+      desc2="Education to future-proof your career."
+      image={signupImg}
+      formtype="signup"
+      setIsLoggedIn={setIsLoggedIn}
     />
   )
 }

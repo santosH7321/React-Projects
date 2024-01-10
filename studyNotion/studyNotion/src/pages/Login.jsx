@@ -1,19 +1,17 @@
-import Template from "../components/Template"
-import loginImg from '../assets/login.png'
+
+import Template from '../components/Template'
+import loginImg from "../assets/login.png"
 
 const Login = ({setIsLoggedIn}) => {
   return (
-      <Template 
+    <Template
       title="Welcome Back"
-      desc1="Bulding skills for today, tommorrow, and beyond."
+      desc1="Build skills for today, tomorrow, and beyond."
       desc2="Education to future-proof your career."
       image={loginImg}
-      formtype="Login"
+      formtype="login"
       setIsLoggedIn={setIsLoggedIn}
-
-      
-      
-      />
+    />
   )
 }
 

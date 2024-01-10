@@ -1,34 +1,51 @@
-import { useState } from "react";
-import { FaRegEye } from "react-icons/fa";
-import { FaRegEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
-const LoginForm = () => {
-    const [formData, setFormData] = useState({
-        email:"", 
-        password:""
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-hot-toast';
+import { useState } from "react";
+
+
+const LoginForm = ({setIsLoggedIn}) => {
+
+    const navigate = useNavigate();
+
+    const [formData, setFormData] = useState( {
+        email:"", password:""
     })
-    const [showPassword, setShowPassword] = useState(false);
-    function changeHandler(event){
-        setFormData((prevData) => (
+
+    const[showPassword, setShowPassword] = useState(false);
+
+    function changeHandler(event) {
+
+        setFormData( (prevData) =>(
             {
                 ...prevData,
-                [event.target.name]:event.target.value,
+                [event.target.name]:event.target.value
             }
-        ))
+        ) )
+
     }
+
+    function submitHandler(event) {
+        event.preventDefault();
+        setIsLoggedIn(true);
+        toast.success("Logged In");
+        navigate("/dashboard");
+    }
+
   return (
-    <form>
+    <form onSubmit={submitHandler}>
         <label>
             <p>
                 Email Address<sup>*</sup>
             </p>
             <input 
-            type="email"
-            value={formData.email}
-            onChange={changeHandler}
-            placeholder="Enter email id"
-            name="email"
+                required
+                type="email"
+                value = {formData.email}
+                onChange={changeHandler}
+                placeholder="Enter email id"
+                name="email"
             />
         </label>
 
@@ -37,26 +54,29 @@ const LoginForm = () => {
                 Password<sup>*</sup>
             </p>
             <input 
-            type={showPassword ? ("text") : ("password")}
-            value={formData.password}
-            onChange={changeHandler}
-            placeholder="Enter Password"
-            name="password"
+                required
+                type= {showPassword ? ("text") : ("password")}
+                value = {formData.password}
+                onChange={changeHandler}
+                placeholder="Enter Password"
+                name="password"
             />
 
             <span onClick={() => setShowPassword((prev) => !prev)}>
-                {showPassword ? (<FaRegEye />) : (<FaRegEyeSlash />) }
+                {showPassword ? (<AiOutlineEyeInvisible/>) : (<AiOutlineEye/>)}
             </span>
-        
-            <Link to='#'>
+
+            <Link to="#">
                 <p>
-                    Forget Password
+                    Forgot Password
                 </p>
             </Link>
         </label>
-        
-            <button>Sign In</button>
-        
+
+        <button>
+            Sign In
+        </button>
+
     </form>
   )
 }
