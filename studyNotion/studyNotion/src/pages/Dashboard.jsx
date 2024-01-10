@@ -2,7 +2,9 @@
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <div className="flex justify-center items-center">
+      <h1>Welcome to studyNotion</h1>
+    </div>
   )
 }
 
