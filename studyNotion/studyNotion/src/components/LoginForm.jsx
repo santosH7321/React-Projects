@@ -1,10 +1,12 @@
+import { useState } from "react";
 import { FaRegEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const LoginForm = () => {
     const [formData, setFormData] = useState({
-        email:"", password:""
+        email:"", 
+        password:""
     })
     const [showPassword, setShowPassword] = useState(false);
     function changeHandler(event){
@@ -22,13 +24,15 @@ const LoginForm = () => {
                 Email Address<sup>*</sup>
             </p>
             <input 
-            type="text"
+            type="email"
             value={formData.email}
             onChange={changeHandler}
             placeholder="Enter email id"
             name="email"
             />
+        </label>
 
+        <label>
             <p>
                 Password<sup>*</sup>
             </p>
@@ -43,12 +47,15 @@ const LoginForm = () => {
             <span onClick={() => setShowPassword((prev) => !prev)}>
                 {showPassword ? (<FaRegEye />) : (<FaRegEyeSlash />) }
             </span>
-
+        </label>
+        <label>
             <Link to='#'>
                 <p>
                     Forget Password
                 </p>
             </Link>
+        </label>
+        <label>
             <button>Sign In</button>
         </label>
     </form>
