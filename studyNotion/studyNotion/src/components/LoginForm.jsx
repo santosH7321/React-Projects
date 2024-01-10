@@ -47,17 +47,16 @@ const LoginForm = () => {
             <span onClick={() => setShowPassword((prev) => !prev)}>
                 {showPassword ? (<FaRegEye />) : (<FaRegEyeSlash />) }
             </span>
-        </label>
-        <label>
+        
             <Link to='#'>
                 <p>
                     Forget Password
                 </p>
             </Link>
         </label>
-        <label>
+        
             <button>Sign In</button>
-        </label>
+        
     </form>
   )
 }

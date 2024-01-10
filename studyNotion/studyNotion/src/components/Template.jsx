@@ -1,5 +1,6 @@
 import frameImg from '../assets/frame.png'
-
+import Signup from '../pages/Signup'
+import Login from '../pages/Login'
 
 const Template = ({title, desc1, desc2, image, formtype, setIsLoggedIn}) => {
   return (
