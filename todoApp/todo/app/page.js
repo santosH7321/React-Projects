@@ -46,7 +46,7 @@ if(mainTask.length > 0){
 }
   return (
     <>
-      <h1 className='flex justify-center items-center text-5xl bg-sky-500 px-5 py-3 text-white font-bold '>Santosh Todo list</h1>
+      <h1 className='flex justify-center items-center text-5xl bg-sky-500 px-5 py-3 text-white font-bold '>Santosh Todo List</h1>
 
       <form onSubmit={submitHandler}>
         <input type='text' className='text-2xl border-zinc-800 border-4 m-8 px-4 py-2 ' placeholder='Enter Title here' 

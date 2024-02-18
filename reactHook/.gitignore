@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+*{../Day_9/js/Components/
+        ../apiCallingAxios/api copy/
+        ../apiCallingAxios/package-lock.json
+        ../apiCallingAxios/package.json
+        ../node_modules/
+        ../package-lock.json
+        ../package.json
+        ../realWorldTodo/todo.md
+        }

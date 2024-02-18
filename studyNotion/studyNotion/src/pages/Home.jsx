@@ -3,8 +3,8 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoInstagram } from "react-icons/io";
-import { LuMouse } from "react-icons/lu";
-import { FaArrowDown } from "react-icons/fa";
+import Footer from "./Footer";
+
 
 
 
@@ -30,7 +30,7 @@ const Home = ({isLoggedIn}) => {
           <button className="flex justify-center items-center gap-2 px-6 py-3 w-fit bg-[#5A43CB] font-medium rounded-md hover:bg-purple-500">
             Contact Me <LuSendHorizonal /></button>
 
-            <button className="flex items-center gap-2 "><LuMouse className="text-2xl text-[#5A43CB]"/> <span> Scroll Down</span> <FaArrowDown className="text-xl text-[#5A43CB]"/></button>
+           
         </div>
         <div>
           <img className="h-[300px] w-[310px]" src="https://images.pexels.com/photos/17771509/pexels-photo-17771509/free-photo-of-santosh7321.png?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="img" />

@@ -9,6 +9,7 @@ import { useState } from 'react'
 import PrivateRoute from "./components/PrivateRoute";
 import About from "./pages/About";
 import Contact from "./pages/contact";
+import Footer from "./pages/Footer";
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/" element= {<Home isLoggedIn={isLoggedIn}/>} />
         <Route path="/about" element={<About isLoggedIn={isLoggedIn}/>} />
         <Route path="/contact" element={<Contact isLoggedIn={isLoggedIn}/>} />
+        <Route path="/footer" element={<Footer isLoggedIn={isLoggedIn}/>} />
         <Route path="/login" element = {<Login  setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/signup" element={<Signup  setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/dashboard" element = {
