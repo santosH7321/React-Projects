@@ -2,7 +2,6 @@
   "name": "lecture02",
   "version": "1.0.0",
   "description": "This is Episode 02 to leanig of ract",
-  "main": "index.js",
   "scripts": {
     "test": "jest"
   },
@@ -18,5 +17,9 @@
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
-  }
+  },
+  "browserslist": [
+    "last 10 chorme versions",
+    "last 2 firefox versions"
+  ]
 }
