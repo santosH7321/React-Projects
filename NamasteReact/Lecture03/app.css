@@ -33,3 +33,59 @@ body {
     font-weight: 600;
 
 }
+
+.res-card {
+    padding: 5px;   
+    width: 200px;
+    height: 300px;
+    margin: 1rem;
+    background-color: #f0f0f0;
+    box-shadow: 10px 5px 5px #00c3ff4f;
+    border-radius: 10px; 
+}
+/* .res-card:hover{
+    border: 5px solid #00000097;
+    transition-delay: 0.1 ease-in-out;
+} */
+
+.search {
+    padding: 10px;
+}
+
+.res-logo {
+    width: 100%;
+    height: 200px;
+}
+.res-logo:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+.res-card h3 {
+    font-size: 16px;
+    line-height: 2px;
+    font-weight: 700;
+}
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 5px;
+}
+.rating > span{
+    font-weight: 700;
+    background-color: green;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+.occ {
+    font-size: 16px;
+    line-height: 5px;
+    font-weight: 600;
+}
+.res-container {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
