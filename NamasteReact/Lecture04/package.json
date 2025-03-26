@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Food Ordering App",
   "scripts": {
-    "test": "jest",
-    "start": "parcel index.js",
-    "build": "parcel build index.js"
+    "start": "parcel App.js",
+    "build": "parcel build App.js",
+    "test": "jest"
   },
   "keywords": [
     "JavaScript"
@@ -13,6 +13,7 @@
   "author": "Santosh Kumar",
   "license": "ISC",
   "devDependencies": {
+    "@types/react-dom": "^18.3.1",
     "parcel": "^2.12.0",
     "process": "^0.11.10"
   },
