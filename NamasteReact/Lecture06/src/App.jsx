@@ -1,9 +1,12 @@
-const App =() => {
+import React from "react";
+import Navbar from "./components/Navbar";
+
+const App = () => {
   return (
-    <div>
-      <h1 className="flex justify-center items-center text-4xl font-semibold">My React App</h1>
-    </div>
-  )
-}
+    <>
+      <Navbar />
+    </>
+  );
+};
 
 export default App;
