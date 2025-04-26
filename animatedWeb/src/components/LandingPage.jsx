@@ -31,18 +31,17 @@ const LandingPage = () => {
             {item}
           </p>
         ))}
-      
 
-      <div className="start flex items-center gap-5 ">
-        <div className="px-5 py-2 border-[1px] border-zinc-400 font-light text-md  capitalize rounded-full">
-          start the project
+        <div className="start flex items-center gap-5 ">
+          <div className="px-5 py-2 border-[1px] border-zinc-400 font-light text-md  capitalize rounded-full">
+            start the project
+          </div>
+          <div className="w-10 h-10 border-[2px] border-zinc-500 flex items-center justify-center rounded-full">
+            <span className="rotate-[45deg]">
+              <FaArrowUpLong />
+            </span>
+          </div>
         </div>
-        <div className="w-10 h-10 border-[2px] border-zinc-500 flex items-center justify-center rounded-full">
-          <span className="rotate-[45deg]">
-            <FaArrowUpLong />
-          </span>
-        </div>
-      </div>
       </div>
     </div>
   );
