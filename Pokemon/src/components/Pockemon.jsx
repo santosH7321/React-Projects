@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import "../index.css"
+import PockemonCards from "./PockemonCards"
 
 const Pockemon = () => { 
 
-    const [pokemon, setPokemon] = useState([]); 
+    const [pokemon, setPokemon] = useState([]);
+    const [loading, setLoading] = useState(true); 
 
     const API = "https://pokeapi.co/api/v2/pokemon?limit=150";
 
@@ -21,17 +23,40 @@ const Pockemon = () => {
         
 
             const detailedResponses = await Promise.all(detailedPokemonData);
-            console.log(detailedResponses)
             setPokemon(detailedResponses);
+            setLoading(false);
         } catch (error) {
-            console.log("Some problem in api", error)
+            console.log("Some problem in api", error);
+            setLoading(false)
         }
     }
     useEffect(() => {
         fetchPockemon();
     }, []);
+
+    // Shimer ui
+    if(loading){
+        return (
+            <div>
+                <h1>Loading....</h1>
+            </div>
+        );
+    }
   return (
-    <div className='flex items-center text-5xl font-bold'>Pockemon</div>
+    <section className="container">
+        <header>
+            <h1>Lets Catch Pokemon</h1>
+        </header>
+        <div>
+            <ul className='cards'>
+                {
+                    pokemon.map((curPokemon) => {
+                        return <PockemonCards key={curPokemon.id} pokemonData={curPokemon} />
+                    })
+                }
+            </ul>
+        </div>
+    </section>
   )
 }
 
