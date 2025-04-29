@@ -6,7 +6,8 @@ const Pockemon = () => {
 
     const [pokemon, setPokemon] = useState([]);
     const [loading, setLoading] = useState(true); 
-    const [error, setError] = useState(null)
+    const [error, setError] = useState(null);
+    const [search, setSearch] = useState("");
 
     const API = "https://pokeapi.co/api/v2/pokemon?limit=150";
 
@@ -37,6 +38,11 @@ const Pockemon = () => {
         fetchPockemon();
     }, []);
 
+    // search functionality
+    const searchData = pokemon.filter((curPokemon) => {
+        curPokemon.name.toLowerCase().includes(search.toLowerCase());
+    })
+
     // Shimer ui
     if(loading){
         return (
@@ -58,10 +64,15 @@ const Pockemon = () => {
         <header>
             <h1>Lets Catch Pokemon</h1>
         </header>
+        <div className='pokemon-search'>
+            <input type="text" placeholder='Search Pokemon' value={search} onChange={(e) =>{
+                setSearch(e.target.value)
+            }}/>
+        </div>
         <div>
             <ul className='cards'>
                 {
-                    pokemon.map((curPokemon) => {
+                    searchData.map((curPokemon) => {
                         return <PockemonCards key={curPokemon.id} pokemonData={curPokemon} />
                     })
                 }

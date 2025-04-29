@@ -22,7 +22,7 @@ const PockemonCards = ({ pokemonData }) => {
             <span>Weight:</span>{pokemonData.weight}
         </p>
         <p className="pokemon-info">
-            <span>speed:</span>{pokemonData.stats[5].base_stat}
+            <span>speed:</span>{pokemonData.stats[1].base_stat}
         </p>
       </div>
       <div className="grid-three-cols">
