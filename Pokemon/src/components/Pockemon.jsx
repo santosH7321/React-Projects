@@ -6,6 +6,7 @@ const Pockemon = () => {
 
     const [pokemon, setPokemon] = useState([]);
     const [loading, setLoading] = useState(true); 
+    const [error, setError] = useState(null)
 
     const API = "https://pokeapi.co/api/v2/pokemon?limit=150";
 
@@ -23,11 +24,13 @@ const Pockemon = () => {
         
 
             const detailedResponses = await Promise.all(detailedPokemonData);
+            console.log(detailedResponses)
             setPokemon(detailedResponses);
             setLoading(false);
         } catch (error) {
             console.log("Some problem in api", error);
             setLoading(false)
+            setError(error)
         }
     }
     useEffect(() => {
@@ -41,6 +44,14 @@ const Pockemon = () => {
                 <h1>Loading....</h1>
             </div>
         );
+    }
+    // error handeling
+    if(error){
+        return (
+            <div>
+                <h1>{error.message}</h1>
+            </div>
+        )
     }
   return (
     <section className="container">
